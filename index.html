@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>المنصة الإرشادية | معدلات القبول 2026/2027</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+:root{
+    --blue:#3B82B6;
+    --blue-dark:#245B82;
+    --cyan:#DDF4FA;
+    --gold:#D9A441;
+    --gold-light:#FFF4D8;
+    --bg:#F5F9FC;
+    --white:#FFFFFF;
+    --text:#243746;
+    --muted:#71808D;
+    --border:#DCE8EF;
+    --green:#4FA477;
+    --shadow:0 12px 35px rgba(52,89,112,.10);
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+    font-family:"Cairo",sans-serif;
+    background:#EAF2F6;
+    color:var(--text);
+}
+
+body{
+    min-height:100vh;
+}
+
+/* ===== TOP BAR ===== */
+
+.topbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    padding:12px 18px;
+    display:flex;
+    justify-content:center;
+}
+
+.topbar-inner{
+    width:min(1180px,100%);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.brand-small{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:800;
+    color:var(--blue-dark);
+}
+
+.tesla-mini{
+    width:38px;
+    height:38px;
+    border-radius:11px;
+    background:linear-gradient(135deg,#3B82B6,#73C8DE);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.5px;
+    box-shadow:0 5px 15px rgba(59,130,182,.22);
+}
+
+.print-btn{
+    border:none;
+    background:var(--blue);
+    color:white;
+    padding:10px 20px;
+    border-radius:12px;
+    font-family:inherit;
+    font-weight:700;
+    cursor:pointer;
+    font-size:14px;
+    transition:.2s;
+}
+
+.print-btn:hover{
+    background:var(--blue-dark);
+    transform:translateY(-1px);
+}
+
+/* ===== APP ===== */
+
+.app{
+    width:min(1180px,100%);
+    margin:auto;
+    padding:28px 18px 50px;
+}
+
+.slide{
+    width:100%;
+    max-width:1080px;
+    min-height:720px;
+    margin:0 auto 35px;
+    background:var(--white);
+    border-radius:28px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    padding:42px;
+    position:relative;
+    overflow:hidden;
+    page-break-after:always;
+}
+
+.slide::before{
+    content:"";
+    position:absolute;
+    width:230px;
+    height:230px;
+    background:var(--cyan);
+    border-radius:50%;
+    top:-120px;
+    left:-80px;
+    opacity:.8;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    width:170px;
+    height:170px;
+    background:var(--gold-light);
+    border-radius:50%;
+    bottom:-100px;
+    right:-60px;
+    opacity:.7;
+}
+
+.slide-content{
+    position:relative;
+    z-index:2;
+}
+
+/* ===== COVER ===== */
+
+.cover{
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.cover-content{
+    max-width:760px;
+}
+
+.tesla-logo{
+    width:110px;
+    height:110px;
+    margin:0 auto 24px;
+    border-radius:28px;
+    background:linear-gradient(145deg,#2F79AA,#75CDE0);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:19px;
+    letter-spacing:1px;
+    box-shadow:0 15px 35px rgba(47,121,170,.22);
+}
+
+.platform{
+    color:var(--gold);
+    font-weight:800;
+    font-size:19px;
+    margin-bottom:10px;
+}
+
+.cover h1{
+    font-size:clamp(38px,6vw,65px);
+    line-height:1.15;
+    margin:0;
+    color:var(--blue-dark);
+    font-weight:800;
+}
+
+.cover h2{
+    font-size:clamp(22px,3vw,32px);
+    margin:14px 0 22px;
+    color:var(--text);
+}
+
+.cover p{
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.9;
+}
+
+.year-badge{
+    display:inline-block;
+    margin-top:18px;
+    background:var(--cyan);
+    color:var(--blue-dark);
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:800;
+}
+
+/* ===== HEADINGS ===== */
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.section-title{
+    margin:0;
+    font-size:30px;
+    color:var(--blue-dark);
+    font-weight:800;
+}
+
+.section-subtitle{
+    margin:5px 0 0;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.page-number{
+    background:var(--cyan);
+    color:var(--blue-dark);
+    padding:7px 13px;
+    border-radius:10px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+/* ===== TABLE ===== */
+
+.table-wrap{
+    border:1px solid var(--border);
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background:#E9F5FA;
+}
+
+th{
+    color:var(--blue-dark);
+    font-weight:800;
+    padding:12px 13px;
+    font-size:14px;
+}
+
+td{
+    padding:10px 13px;
+    border-top:1px solid #EDF2F5;
+    font-size:13px;
+    font-weight:600;
+}
+
+tbody tr:nth-child(even){
+    background:#FAFCFD;
+}
+
+tbody tr:hover{
+    background:#F0F8FB;
+}
+
+.name{
+    text-align:right;
+}
+
+.rate{
+    text-align:center;
+    direction:ltr;
+    font-weight:800;
+    color:var(--blue-dark);
+}
+
+.na{
+    color:#A2ADB5;
+    font-weight:600;
+}
+
+.note{
+    margin-top:14px;
+    color:var(--muted);
+    font-size:12px;
+}
+
+.legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+}
+
+.legend span{
+    background:#F3F7F9;
+    border:1px solid var(--border);
+    padding:6px 10px;
+    border-radius:9px;
+    font-size:11px;
+    color:var(--muted);
+}
+
+/* ===== CATEGORY CARDS ===== */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.info-card{
+    background:#F8FBFC;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:20px;
+}
+
+.info-card h3{
+    margin:0 0 8px;
+    color:var(--blue-dark);
+}
+
+.info-card p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* ===== CLOSING ===== */
+
+.closing{
+    text-align:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.closing-box{
+    max-width:650px;
+}
+
+.closing h2{
+    font-size:42px;
+    color:var(--blue-dark);
+    margin:0 0 12px;
+}
+
+.closing p{
+    color:var(--muted);
+    line-height:1.9;
+}
+
+.qr-box{
+    width:190px;
+    height:190px;
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:20px;
+    margin:25px auto;
+    padding:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#qrcode img,
+#qrcode canvas{
+    max-width:165px;
+    max-height:165px;
+}
+
+.facebook-link{
+    display:inline-block;
+    background:var(--blue);
+    color:white;
+    padding:11px 22px;
+    border-radius:12px;
+    font-weight:700;
+    margin-top:5px;
+}
+
+/* ===== FOOTER ===== */
+
+.slide-footer{
+    position:absolute;
+    bottom:18px;
+    left:42px;
+    right:42px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:#9AA8B2;
+    font-size:10px;
+    z-index:5;
+}
+
+.footer-tesla{
+    font-weight:800;
+    color:var(--blue);
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:700px){
+
+    .app{
+        padding:15px 10px 30px;
+    }
+
+    .slide{
+        min-height:650px;
+        padding:28px 18px 55px;
+        border-radius:20px;
+        margin-bottom:20px;
+    }
+
+    .section-title{
+        font-size:23px;
+    }
+
+    .section-head{
+        align-items:flex-start;
+    }
+
+    th{
+        font-size:11px;
+        padding:9px 6px;
+    }
+
+    td{
+        font-size:10px;
+        padding:8px 6px;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cover h1{
+        font-size:40px;
+    }
+
+    .cover h2{
+        font-size:22px;
+    }
+
+    .cover p{
+        font-size:14px;
+    }
+
+    .slide-footer{
+        left:18px;
+        right:18px;
+    }
+}
+
+/* ===== PRINT ===== */
+
+@media print{
+
+    @page{
+        size:A4 portrait;
+        margin:0;
+    }
+
+    html,body{
+        background:white !important;
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+    }
+
+    .topbar{
+        display:none !important;
+    }
+
+    .app{
+        padding:0 !important;
+        width:100% !important;
+    }
+
+    .slide{
+        width:100%;
+        max-width:none;
+        min-height:100vh;
+        height:100vh;
+        margin:0;
+        border:none;
+        border-radius:0;
+        box-shadow:none;
+        page-break-after:always;
+        break-after:page;
+        padding:35px;
+    }
+
+    .slide:last-child{
+        page-break-after:auto;
+        break-after:auto;
+    }
+
+    .slide::before,
+    .slide::after{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== TOP BAR ===== -->
+
+<div class="topbar">
+    <div class="topbar-inner">
+
+        <div class="brand-small">
+            <div class="tesla-mini">TESLA</div>
+            <span>المنصة الإرشادية</span>
+        </div>
+
+        <button class="print-btn" onclick="window.print()">
+            🖨️ طباعة
+        </button>
+
+    </div>
+</div>
+
+
+<div class="app">
+
+<!-- =========================================================
+     1 — COVER
+========================================================= -->
+
+<section class="slide cover">
+
+    <div class="slide-content cover-content">
+
+        <div class="tesla-logo">
+            TEAM<br>TESLA
+        </div>
+
+        <div class="platform">
+            المنصة الإرشادية
+        </div>
+
+        <h1>معدلات القبول</h1>
+
+        <h2>جامعة اليرموك</h2>
+
+        <p>
+            دليل سريع للمستجدين للتعرّف على معدلات القبول
+            للتخصصات في جامعة اليرموك.
+        </p>
+
+        <div class="year-badge">
+            2026 / 2027
+        </div>
+
+    </div>
+
+    <div class="slide-footer">
+        <span>المنصة الإرشادية</span>
+        <span class="footer-tesla">TEAM TESLA</span>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     2 — MEDICAL
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الصحة والعلوم الطبية</h2>
+        <p class="section-subtitle">معدلات القبول للسنة الحالية</p>
+    </div>
+    <div class="page-number">02</div>
+</div>
+
+<div class="table-wrap">
+<table>
+
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>المسار الأكاديمي</th>
+    <th>المسار المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">دكتور في الطب</td>
+<td class="rate">98.10</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الصيدلة</td>
+<td class="rate">95.60</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">التمريض</td>
+<td class="rate">92.80</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">علم النفس الإكلينيكي</td>
+<td class="rate">86.40</td>
+<td class="rate na">—</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="note">
+— تعني أن القبول من المسار المهني غير متاح وفق البيانات المعروضة.
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>معدلات القبول 2026/2027</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     3 — ENGINEERING 1
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الهندسة</h2>
+        <p class="section-subtitle">التخصصات الهندسية — الجزء الأول</p>
+    </div>
+    <div class="page-number">03</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">هندسة العمارة</td>
+<td class="rate">80.00</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الهندسة المدنية</td>
+<td class="rate">80.10</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">هندسة المدن الذكية والمستدامة</td>
+<td class="rate">80.30</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">هندسة الالكترونيات والروبوتات</td>
+<td class="rate">80.10</td>
+<td class="rate">82.50</td>
+</tr>
+
+<tr>
+<td class="name">هندسة الاتصالات</td>
+<td class="rate">80.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">هندسة الحاسوب</td>
+<td class="rate">83.40</td>
+<td class="rate">96.70</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>الهندسة</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     4 — ENGINEERING 2
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الهندسة</h2>
+        <p class="section-subtitle">التخصصات الهندسية — الجزء الثاني</p>
+    </div>
+    <div class="page-number">04</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">هندسة الحاسوب / انترنت الأشياء</td>
+<td class="rate">80.00</td>
+<td class="rate">81.60</td>
+</tr>
+
+<tr>
+<td class="name">هندسة القوى الكهربائية</td>
+<td class="rate">80.05</td>
+<td class="rate">80.50</td>
+</tr>
+
+<tr>
+<td class="name">هندسة النظم الطبية الحيوية</td>
+<td class="rate">80.30</td>
+<td class="rate">80.40</td>
+</tr>
+
+<tr>
+<td class="name">هندسة المعلوماتية الطبية الحيوية</td>
+<td class="rate">80.40</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الهندسة الصناعية</td>
+<td class="rate">80.40</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الهندسة الميكانيكية</td>
+<td class="rate">80.80</td>
+<td class="rate">80.40</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>الهندسة</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     5 — COMPUTING & SCIENCE
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الحوسبة والعلوم</h2>
+        <p class="section-subtitle">تخصصات الحوسبة والعلوم الأساسية</p>
+    </div>
+    <div class="page-number">05</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">تكنولوجيا معلومات الأعمال</td>
+<td class="rate">83.30</td>
+<td class="rate">87.60</td>
+</tr>
+
+<tr>
+<td class="name">الأمن السيبراني</td>
+<td class="rate">84.00</td>
+<td class="rate">89.10</td>
+</tr>
+
+<tr>
+<td class="name">علم البيانات والذكاء الاصطناعي</td>
+<td class="rate">85.20</td>
+<td class="rate">88.90</td>
+</tr>
+
+<tr>
+<td class="name">رياضيات</td>
+<td class="rate">74.80</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الفيزياء</td>
+<td class="rate">71.50</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الفيزياء الطبية والحيوية</td>
+<td class="rate">74.60</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الكيمياء</td>
+<td class="rate">85.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">العلوم الحياتية</td>
+<td class="rate">86.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الجيولوجيا التطبيقية</td>
+<td class="rate">79.90</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الاحصاء</td>
+<td class="rate">71.10</td>
+<td class="rate na">—</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>الحوسبة والعلوم</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     6 — BUSINESS
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الأعمال والاقتصاد</h2>
+        <p class="section-subtitle">تخصصات الأعمال والإدارة والمجالات المالية</p>
+    </div>
+    <div class="page-number">06</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">إدارة الاعمال</td>
+<td class="rate">77.90</td>
+<td class="rate">90.30</td>
+</tr>
+
+<tr>
+<td class="name">الإدارة العامة</td>
+<td class="rate">71.30</td>
+<td class="rate">81.70</td>
+</tr>
+
+<tr>
+<td class="name">المحاسبة</td>
+<td class="rate">74.85</td>
+<td class="rate">81.10</td>
+</tr>
+
+<tr>
+<td class="name">العلوم المالية والمصرفية</td>
+<td class="rate">70.15</td>
+<td class="rate">80.80</td>
+</tr>
+
+<tr>
+<td class="name">التسويق</td>
+<td class="rate">74.23</td>
+<td class="rate">85.70</td>
+</tr>
+
+<tr>
+<td class="name">الاقتصاد</td>
+<td class="rate">67.30</td>
+<td class="rate">72.90</td>
+</tr>
+
+<tr>
+<td class="name">إقتصاد المال والأعمال</td>
+<td class="rate">69.65</td>
+<td class="rate">78.60</td>
+</tr>
+
+<tr>
+<td class="name">الاقتصاد والمصارف الاسلامية</td>
+<td class="rate">84.50</td>
+<td class="rate">75.50</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>الأعمال والاقتصاد</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     7 — LANGUAGES
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">اللغات والترجمة</h2>
+        <p class="section-subtitle">تخصصات اللغات والآداب والترجمة</p>
+    </div>
+    <div class="page-number">07</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">اللغة العربية وآدابها</td>
+<td class="rate">75.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغة العربية التطبيقية</td>
+<td class="rate">73.25</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغة الانجليزية وآدابها</td>
+<td class="rate">75.90</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغة الانجليزية التطبيقية</td>
+<td class="rate">81.50</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغة الفرنسية التطبيقية</td>
+<td class="rate">65.05</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الترجمة التحريرية والشفوية</td>
+<td class="rate">70.90</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغة العبرية</td>
+<td class="rate">65.00</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغات الحديثة/ لغة فرنسية - لغة انجليزية</td>
+<td class="rate">74.00</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغات الحديثة/ لغة ألمانية - لغة انجليزية</td>
+<td class="rate">78.10</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">اللغات الحديثة/ لغة تركية - لغة انجليزية</td>
+<td class="rate">65.00</td>
+<td class="rate na">—</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>اللغات والترجمة</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     8 — HUMANITIES / LAW / SHARIA
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">الإنسانيات والقانون والشريعة</h2>
+        <p class="section-subtitle">تخصصات العلوم الإنسانية والقانون والدراسات الإسلامية</p>
+    </div>
+    <div class="page-number">08</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">التاريخ والحضارة</td>
+<td class="rate">71.25</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الجغرافيا</td>
+<td class="rate">70.40</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">العلوم السياسية</td>
+<td class="rate">72.50</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">علم الاجتماع والعمل الاجتماعي</td>
+<td class="rate">73.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">القانون</td>
+<td class="rate">94.00</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">معلم الصف / إناث</td>
+<td class="rate">77.60</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الطفولة المبكرة/ اناث</td>
+<td class="rate">73.60</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الفقه وأصوله</td>
+<td class="rate">88.90</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">أصول الدين</td>
+<td class="rate">85.30</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الدراسات الاسلامية / التربية الإسلامية</td>
+<td class="rate">83.80</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الدراسات الاسلامية / الدراسات الأسرية</td>
+<td class="rate">82.70</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الدراسات الاسلامية / الدعوة والاعلام الاسلامي</td>
+<td class="rate">81.10</td>
+<td class="rate na">—</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>الإنسانيات والقانون والشريعة</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     9 — TOURISM MEDIA ARTS SPORTS
+========================================================= -->
+
+<section class="slide">
+
+<div class="slide-content">
+
+<div class="section-head">
+    <div>
+        <h2 class="section-title">السياحة والإعلام والفنون والرياضة</h2>
+        <p class="section-subtitle">التخصصات المتبقية</p>
+    </div>
+    <div class="page-number">09</div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+    <th>التخصص</th>
+    <th>الأكاديمي</th>
+    <th>المهني</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td class="name">الآثار</td>
+<td class="rate">69.40</td>
+<td class="rate">69.30</td>
+</tr>
+
+<tr>
+<td class="name">الأنثروبولوجيا</td>
+<td class="rate">67.85</td>
+<td class="rate">71.90</td>
+</tr>
+
+<tr>
+<td class="name">صيانة المصادر التراثية وإدارتها</td>
+<td class="rate">70.20</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الادارة السياحية</td>
+<td class="rate">67.60</td>
+<td class="rate">78.80</td>
+</tr>
+
+<tr>
+<td class="name">الارشاد السياحي</td>
+<td class="rate">65.70</td>
+<td class="rate">72.70</td>
+</tr>
+
+<tr>
+<td class="name">الادارة الفندقية</td>
+<td class="rate">65.95</td>
+<td class="rate">81.40</td>
+</tr>
+
+<tr>
+<td class="name">العلاقات العامة والإعلان</td>
+<td class="rate">69.50</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">الإذاعة والتلفزيون</td>
+<td class="rate">73.40</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">علوم الرياضة</td>
+<td class="rate">81.80</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">التربية البدنية التطبيقي</td>
+<td class="rate">81.70</td>
+<td class="rate na">—</td>
+</tr>
+
+<tr>
+<td class="name">التربية الفنية</td>
+<td class="rate">81.40</td>
+<td class="rate">92.30</td>
+</tr>
+
+<tr>
+<td class="name">الفنون الرقمية</td>
+<td class="rate">84.90</td>
+<td class="rate">96.30</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+</div>
+
+<div class="slide-footer">
+    <span>السياحة والإعلام والفنون والرياضة</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     10 — CLOSING
+========================================================= -->
+
+<section class="slide closing">
+
+<div class="slide-content closing-box">
+
+    <div class="tesla-logo">
+        TEAM<br>TESLA
+    </div>
+
+    <h2>لسه محتار؟</h2>
+
+    <p>
+        تابع المنصة الإرشادية من Team Tesla
+        لكل ما يخص المستجدين في جامعة اليرموك.
+    </p>
+
+    <div class="qr-box">
+        <div id="qrcode"></div>
+    </div>
+
+    <div class="facebook-link">
+        انضم لمجموعة Team Tesla
+    </div>
+
+    <div class="year-badge">
+        2026 / 2027
+    </div>
+
+</div>
+
+<div class="slide-footer">
+    <span>المنصة الإرشادية</span>
+    <span class="footer-tesla">TEAM TESLA</span>
+</div>
+
+</section>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   QR CODE
+========================================================= */
+
+const facebookGroup =
+"https://www.facebook.com/share/g/1RhKHXTd6o/";
+
+new QRCode(document.getElementById("qrcode"), {
+    text: facebookGroup,
+    width:165,
+    height:165,
+    colorDark:"#245B82",
+    colorLight:"#FFFFFF",
+    correctLevel:QRCode.CorrectLevel.H
+});
+
+</script>
+
+</body>
+</html>
